@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function HomeScreen() {
+export default function ConfiguracoesScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>✨ Jornada Mágica ✨</Text>
-      <Text>Bem-vindo(a) ao seu mundo de aventuras!</Text>
+      <Text style={styles.title}>⚙️ Configurações</Text>
+      <Text>Ajuste o app do seu jeito!</Text>
     </View>
   );
 }
@@ -14,12 +14,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f0f8ff",
+    backgroundColor: "#f5f5f5",
   },
   title: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: "bold",
-    color: "#6a0dad",
+    color: "#333",
     marginBottom: 10,
   },
 });

@@ -1,9 +1,20 @@
-import { Tabs } from "expo-router";
+import { Stack, Tabs } from "expo-router";
 import { RecompensasProvider } from "../context/RecompensasContext";
 
 export default function Layout() {
   return (
     <RecompensasProvider>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+        <Stack.Screen
+          name="parabens"
+          options={{
+            presentation: "modal",
+            title: "Parabéns!",
+          }}
+        />
+      </Stack>
       <Tabs
         screenOptions={{
           headerStyle: { backgroundColor: "#6a0dad" },

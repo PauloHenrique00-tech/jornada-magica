@@ -1,25 +1,41 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
 
-export default function HomeScreen() {
+export default function TabsLayout() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>✨ Jornada Mágica ✨</Text>
-      <Text>Bem-vindo(a) ao seu mundo de aventuras!</Text>
-    </View>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: "#6a0dad",
+        tabBarStyle: { backgroundColor: "#fff", paddingBottom: 4 },
+      }}
+    >
+      <Tabs.Screen
+        name="rotinas"
+        options={{
+          title: "Rotinas",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="list" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="recompensas"
+        options={{
+          title: "Recompensas",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="star" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="configuracoes"
+        options={{
+          title: "Configurações",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="settings" size={size} color={color} />
+          ),
+        }}
+      />
+    </Tabs>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f0f8ff",
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#6a0dad",
-    marginBottom: 10,
-  },
-});
